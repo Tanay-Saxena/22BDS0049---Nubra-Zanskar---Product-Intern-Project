@@ -3,12 +3,13 @@
 
 ## Nubra Product Intern Assessment - Complete Submission
 
-🎯 Project Overview
+Project Overview
 
-Assessment Title: NUBRA BRIDGE™ – Rule-to-Strategy Wizard for Manual-to-Algo Transition
+Assessment Title: NUBRA – Rule-to-Strategy Wizard for Manual-to-Algo Transition
 Submission Date: September 27, 2025
 
-This repository contains the assessment submission for the Nubra Product Intern position. The focus is a guided, trust-first Rule-to-Strategy Wizard to help manual traders adopt algorithmic trading.
+This repository contains the assessment submission for the Nubra Product Intern position.
+The focus is a guided, trust-first Rule-to-Strategy Wizard to help manual traders adopt algorithmic trading.
 
 ---
 
