@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-Got it ✅ — I’ll update your file to reflect the **new work we’ve completed**:
-
-* Keep the **Nubra** branding (as required).
-* Replace **“Strategy Converter”** with **“Rule-to-Strategy Wizard (R2S Wizard)”**.
-* Update the **wireframes section** to match the actual wizard flow (Login → Step 1 → Step 2 → Step 3 → Automation Modes → Dashboard Improved).
-* Revise **Key Insights** and **Implementation Phases** based on the rewritten competitor analysis, UI/UX audit, and feature proposal.
-
-Here’s the updated file:
 
 ---
 
