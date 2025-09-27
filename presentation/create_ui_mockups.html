@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nubra — UI Mockups: Wizard Flow</title>
+  <style>
+    :root{
+      --bg:#fbfdfd; --surface:#fff; --muted:#6b7280;
+      --nubra:#0ea5a3; --accent:#ff6b4a; --card:#ffffff; --radius:12px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);margin:0;padding:28px;color:#0b1220}
+    header{max-width:1200px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center}
+    header h1{margin:0;font-size:18px;color:var(--nubra)} header p{margin:0;color:var(--muted);font-size:13px}
+    .stage-wrapper{max-width:1200px;margin:0 auto;display:flex;gap:18px;flex-wrap:wrap}
+    .mock{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 8px 30px rgba(11,15,20,0.06);width:calc(33% - 12px);min-width:260px}
+    .mock h3{margin:0 0 8px;font-size:15px;color:#082228}
+    .mock .meta{font-size:12px;color:var(--muted);margin-bottom:12px}
+    .field{background:#f7fafc;padding:12px;border-radius:8px;margin-bottom:10px;font-size:14px;color:#0b1220}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--nubra),#06b6d4);color:white;text-decoration:none;font-weight:600}
+    .note{font-size:12px;color:var(--muted);margin-top:8px}
+    .flow{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px}
+    .chip{padding:8px 12px;background:#ecfeff;border-radius:999px;color:#064e4a;font-weight:600;font-size:13px;border:1px solid rgba(6,11,17,0.03)}
+    .explain{font-size:13px;color:var(--muted);margin-top:12px}
+    @media (max-width:900px){.mock{width:calc(50% - 12px)}}
+    @media (max-width:600px){.mock{width:100%}}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Nubra — Interface mockups (Wizard-first flow)</h1>
+      <p>Three lightweight screens illustrating the recommended onboarding path</p>
+    </div>
+    <div class="note">For submission: include these PNGs as slides</div>
+  </header>
+
+  <main class="stage-wrapper">
+    <!-- Step 1 -->
+    <article class="mock">
+      <h3>1. Quick Sign-in (email only)</h3>
+      <div class="meta">Low friction: no Demat creation for the assignment</div>
+      <div class="field">Email address input</div>
+      <div class="field">OTP verification (in-app simulated)</div>
+      <div class="field">Select sample trading style: <strong>Momentum / Range / Options</strong></div>
+      <a class="btn" href="#">Continue to Wizard</a>
+      <div class="explain">Rationale: remove signup friction — this mirrors assignment instructions and keeps evaluation simple.</div>
+    </article>
+
+    <!-- Step 2 -->
+    <article class="mock">
+      <h3>2. Rule → Strategy Wizard (guided)</h3>
+      <div class="meta">3 steps: Input → Preview → Simulate</div>
+      <div class="field">Text input: "Buy when 20MA crosses above 50MA and RSI &gt; 60"</div>
+      <div class="field">Parsed blocks: <strong>Indicator</strong> • <strong>Condition</strong> • <strong>Timeframe</strong></div>
+      <div style="display:flex;gap:8px;margin-top:8px">
+        <div class="chip">Edit parsed block</div>
+        <div class="chip">Load sample params</div>
+      </div>
+      <div class="explain">Design choice: show parse confidence and a friendly fallback to a form if parsing fails.</div>
+    </article>
+
+    <!-- Step 3 -->
+    <article class="mock">
+      <h3>3. Sandbox Backtest & Export</h3>
+      <div class="meta">Quick in-browser simulation and one-click export</div>
+      <div class="field">Backtest summary: Win rate, Max drawdown, Expected return</div>
+      <div class="field">Visualization: compact equity curve + trade markers</div>
+      <div style="margin-top:8px"><a class="btn" href="#">Export Strategy (JS/Python)</a></div>
+      <div class="explain">Export includes a short comments block explaining each rule for a reviewer.</div>
+    </article>
+
+    <section style="width:100%;margin-top:12px">
+      <div style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 8px 20px rgba(11,15,20,0.04);">
+        <strong>Microcopy samples</strong>
+        <div class="explain">• When running simulations: "This is a sandbox — results don’t guarantee future performance."</div>
+        <div class="explain">• Parse confidence states: "High confidence / Low confidence — try the guided form."</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

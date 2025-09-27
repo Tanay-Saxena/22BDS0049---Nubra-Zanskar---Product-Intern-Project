@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nubra — Competitor Comparison</title>
+  <style>
+    :root{
+      --bg:#f6fbfb; --card:#ffffff; --muted:#64748b;
+      --accent:#06b6d4; --accent-2:#ff7a59; --good:#16a34a; --bad:#ef4444;
+      --radius:14px; --pad:20px; --shadow:0 10px 30px rgba(16,24,40,0.06);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, Roboto, "Segoe UI", sans-serif;
+      margin:0;background:linear-gradient(180deg,#f7feff,#eef9fb); color:#0f172a;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:1200px;margin:0 auto 18px;}
+    header h1{font-size:20px;margin:0;color:#083344;}
+    header p{margin:0;color:var(--muted);font-size:13px}
+    .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);border:1px solid rgba(6,11,17,0.02)}
+    .card .title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .brand{font-weight:700;color:#062e36}
+    .pill{font-size:13px;padding:6px 10px;border-radius:999px;background:#f1f6f8;color:#084 attach}
+    .tag{font-size:13px;color:var(--muted);margin-bottom:12px}
+    ul.features{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#26394a}
+    .dot{width:10px;height:10px;border-radius:3px;margin-top:6px}
+    .dot.good{background:var(--good)} .dot.bad{background:var(--bad)} .dot.neutral{background:var(--accent)}
+    .summary{max-width:1200px;margin:26px auto 0;padding:18px;background:linear-gradient(90deg,#ffffff,#f8ffff);border-radius:14px;box-shadow:var(--shadow)}
+    .summary h2{margin:0 0 8px;font-size:18px;color:#083344}
+    .summary p{margin:0;color:var(--muted);font-size:14px}
+    .compare-table{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px}
+    .small{font-size:12px;color:var(--muted)}
+    footer{max-width:1200px;margin:24px auto 0;text-align:center;color:var(--muted);font-size:13px}
+    /* small responsive tweak */
+    @media (max-width:720px){.compare-table{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Nubra — Competitor Snapshot</h1>
+      <p>Compact comparison focused on onboarding, explainability, and real user friction.</p>
+    </div>
+    <div class="small">Updated: <strong>Sep 2025</strong></div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <div class="title">
+        <div class="brand">Zerodha Streak</div>
+        <div class="small">Beginner gateway</div>
+      </div>
+      <div class="tag">Strength: broker ecosystem | Weakness: limited customization</div>
+      <ul class="features">
+        <li><span class="dot good"></span> Drag-and-drop rules; low code entry</li>
+        <li><span class="dot neutral"></span> Strong library of templates (but broker-locked)</li>
+        <li><span class="dot bad"></span> Not fully automated; requires confirmations</li>
+        <li><span class="dot neutral"></span> Backtest depth moderate (short history)</li>
+      </ul>
+      <div style="margin-top:12px;font-size:13px;color:var(--muted)">Pricing note: Freemium with broker account</div>
+    </section>
+
+    <section class="card">
+      <div class="title">
+        <div class="brand">Tradetron</div>
+        <div class="small">Cloud-first marketplace</div>
+      </div>
+      <div class="tag">Strength: scalability | Weakness: complexity for newbies</div>
+      <ul class="features">
+        <li><span class="dot good"></span> Cloud execution & multi-broker support</li>
+        <li><span class="dot neutral"></span> Marketplace and social copy features</li>
+        <li><span class="dot bad"></span> UX density — steep menus and many controls</li>
+        <li><span class="dot neutral"></span> Paid model; friction for casual traders</li>
+      </ul>
+      <div style="margin-top:12px;font-size:13px;color:var(--muted)">Good for power users and strategy sellers</div>
+    </section>
+
+    <section class="card">
+      <div class="title">
+        <div class="brand">AlgoTest & QuantMan (grouped)</div>
+        <div class="small">Options-centred tools</div>
+      </div>
+      <div class="tag">Strength: options analysis | Weakness: credit/backtest limits</div>
+      <ul class="features">
+        <li><span class="dot good"></span> Options Greeks, multi-leg support</li>
+        <li><span class="dot neutral"></span> Useful analytics but steeper learning curve</li>
+        <li><span class="dot bad"></span> Some platforms restrict simulations by credits</li>
+        <li><span class="dot neutral"></span> Usually India-only integrations</li>
+      </ul>
+      <div style="margin-top:12px;font-size:13px;color:var(--muted)">Community play: active Telegram/Discord groups</div>
+    </section>
+
+    <section class="card">
+      <div class="title">
+        <div class="brand">Quantiply</div>
+        <div class="small">Low-latency infra</div>
+      </div>
+      <div class="tag">Strength: execution | Weakness: not beginner-ready</div>
+      <ul class="features">
+        <li><span class="dot good"></span> Reliable live execution for F&O</li>
+        <li><span class="dot neutral"></span> Enterprise-grade tooling</li>
+        <li><span class="dot bad"></span> Minimal onboarding for retail users</li>
+        <li><span class="dot neutral"></span> Lacks simple no-code builder</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="title">
+        <div class="brand">Nubra (positioning)</div>
+        <div class="small">Target: manual→algo conversion</div>
+      </div>
+      <div class="tag">Opportunity: combine guided onboarding + explainability</div>
+      <ul class="features">
+        <li><span class="dot good"></span> Can embed Wizard in-app (no account friction)</li>
+        <li><span class="dot good"></span> Emphasize plain-language metrics and micro-lessons</li>
+        <li><span class="dot neutral"></span> Keep initial sandbox broker-agnostic</li>
+        <li><span class="dot neutral"></span> Roadmap to marketplace after trust established</li>
+      </ul>
+      <div style="margin-top:12px;font-size:13px;color:var(--muted)">Strategic angle: be the first true on-ramp for manual traders</div>
+    </section>
+  </main>
+
+  <section class="summary">
+    <h2>Quick takeaways</h2>
+    <p>Nubra should prioritize three levers: <strong>Onboarding simplicity</strong>, <strong>Explainable sandbox results</strong>, and <strong>Progressive automation</strong>. Most competitors excel at either execution or depth — few focus on converting manual traders through guided, trust-building flows.</p>
+
+    <div class="compare-table" style="margin-top:16px">
+      <div class="card"><strong>Dimension</strong><div class="small">Why it matters</div></div>
+      <div class="card"><strong>Competitors</strong><div class="small">General trend</div></div>
+      <div class="card"><strong>Nubra play</strong><div class="small">Suggested feature focus</div></div>
+    </div>
+  </section>
+
+  <footer>Export this page as a PDF for inclusion in your case submission • Generated for placement deliverable</footer>
+</body>
+</html>

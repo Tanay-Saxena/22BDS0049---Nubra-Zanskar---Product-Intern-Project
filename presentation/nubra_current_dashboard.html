@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nubra — Improved Dashboard (recommended)</title>
+  <style>
+    :root{--bg:#f4fbfb;--panel:#ffffff;--nubra:#059669;--muted:#475569;--accent:#ff7a59;--radius:14px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Roboto,Segoe UI,sans-serif;background:var(--bg);color:#072029;padding:28px}
+    .container{max-width:1200px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{font-weight:800;color:var(--nubra);font-size:20px}
+    .hero{display:flex;gap:18px;align-items:center}
+    .hero .left{flex:1}
+    .hero h2{margin:0;font-size:20px}
+    .hero p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .card{background:var(--panel);border-radius:var(--radius);padding:16px;box-shadow:0 8px 30px rgba(2,6,23,0.06);border:1px solid rgba(2,6,23,0.04)}
+    .grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:16px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .action-btn{padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,var(--nubra),#06b6d4);color:#fff;text-decoration:none;font-weight:700}
+    .quick-cards{display:flex;gap:12px;margin-top:12px}
+    .quick{flex:1;padding:12px;border-radius:10px;background:linear-gradient(180deg,#f0fdf4,#ecfdf3);color:#064e3b;font-weight:700;text-align:center}
+    .chart{height:320px;border-radius:12px;background:linear-gradient(90deg,#e6f7f8,#f6fcfc);display:flex;align-items:center;justify-content:center;color:#164e51}
+    .side-widgets{display:flex;flex-direction:column;gap:12px}
+    .widget{padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(2,6,23,0.04)}
+    .widget h4{margin:0 0 8px;font-size:14px}
+    .small{font-size:13px;color:var(--muted)}
+    .progress{height:10px;background:#e6f6f6;border-radius:999px;overflow:hidden}
+    .progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--nubra),#06b6d4);width:65%}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">Nubra</div>
+      <div class="small">Pilot Dashboard — Recommended layout</div>
+    </header>
+
+    <section class="hero card">
+      <div class="left">
+        <h2>Welcome back — try the Rule→Strategy Wizard</h2>
+        <p class="small">Convert a manual rule into a testable strategy in three steps. No Demat required for the assignment; sign in with email.</p>
+
+        <div class="actions" style="margin-top:12px">
+          <a class="action-btn" href="#">Start R2S Wizard</a>
+          <a class="action-btn" style="background:linear-gradient(90deg,#ff7a59,#ff6347)" href="#">Run Quick Backtest</a>
+          <a class="action-btn" style="background:linear-gradient(90deg,#06b6d4,#0891b2)" href="#">Learning Hub</a>
+        </div>
+
+        <div class="quick-cards">
+          <div class="quick">Starter templates</div>
+          <div class="quick">Export code</div>
+          <div class="quick">Sandbox history</div>
+        </div>
+      </div>
+
+      <div style="width:320px">
+        <div class="card" style="margin-bottom:10px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div><strong>Onboarding progress</strong><div class="small">1 of 3 steps complete</div></div>
+            <div style="width:100px"><div class="progress"><i></i></div></div>
+          </div>
+          <div style="margin-top:8px" class="small">Tip: run the sandbox with a small sample dataset first</div>
+        </div>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div><strong>Next action</strong><div class="small">Suggested for your activity</div></div>
+            <div><button class="action-btn" style="padding:8px 10px;font-size:13px">Try Now</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 style="margin:0">Smart Market View</h3>
+            <div class="small">Live sample | Demo data</div>
+          </div>
+          <div class="chart" style="margin-top:12px">Interactive Chart — simplified controls</div>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <div class="card" style="flex:1">
+            <h4 style="margin:0">Recent Simulations</h4>
+            <div class="small" style="margin-top:8px">Last run: MA Crossover (demo)</div>
+          </div>
+          <div class="card" style="width:220px">
+            <h4 style="margin:0">Confidence</h4>
+            <div style="margin-top:8px">Model reliability score</div>
+            <div style="margin-top:10px" class="progress"><i style="width:55%"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side-widgets">
+        <div class="widget">
+          <h4>Suggested Strategy</h4>
+          <div class="small">Momentum Breakout — Confidence: 78%</div>
+          <div style="margin-top:10px"><button class="action-btn" style="background:linear-gradient(90deg,#06b6d4,#0891b2);padding:8px 10px">Preview</button></div>
+        </div>
+
+        <div class="widget">
+          <h4>Learning Byte</h4>
+          <div class="small">What is max drawdown? A plain-language explanation and quick examples.</div>
+        </div>
+
+        <div class="widget">
+          <h4>Export</h4>
+          <div class="small">One-click export to JS/Python templates for reviewers</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>Design note: Clear CTAs, progressive onboarding, and inline learning increase confidence and conversions.</footer>
+  </div>
+</body>
+</html>

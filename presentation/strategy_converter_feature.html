@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nubra — Strategy Converter (R2S Wizard)</title>
+  <style>
+    :root{--bg:#ffffff;--nubra:#0b815a;--muted:#475569;--card:#fbffff;--accent:#ff6b4a;--radius:12px}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Roboto,Segoe UI,sans-serif;background:linear-gradient(180deg,#f8fffe,#ffffff);color:#04202b;padding:28px}
+    .wrap{max-width:1100px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{margin:0;color:var(--nubra);font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .intro{background:var(--card);padding:16px;border-radius:12px;margin-top:18px;border:1px solid rgba(2,6,23,0.04);box-shadow:0 8px 30px rgba(2,6,23,0.04)}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:18px}
+    .feature{background:white;padding:14px;border-radius:10px;border:1px solid rgba(2,6,23,0.04)}
+    .feature h3{margin:0 0 8px;font-size:15px;color:#062a2a}
+    .example{background:#f3fdfc;padding:10px;border-radius:8px;font-family:monospace;font-size:13px;color:#064e49}
+    .journey{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .step{flex:1;min-width:180px;background:white;border-radius:10px;padding:12px;border-left:4px solid var(--nubra)}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;background:linear-gradient(90deg,var(--nubra),#06b6d4);color:white;border-radius:10px;text-decoration:none;font-weight:700}
+    .grid-2{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:18px}
+    .panel{background:white;border-radius:10px;padding:14px;border:1px solid rgba(2,6,23,0.04)}
+    .panel h4{margin:0 0 8px}
+    .metric{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px dashed #eef3f2;font-size:14px;color:#0b2b2a}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Nubra — Strategy Converter (Rule→Strategy Wizard)</h1>
+        <p class="lead">A guided flow to transform manual rules into backtestable strategy templates — designed for placement demo and in-app evaluation.</p>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:13px;color:var(--muted)">Assignment-friendly</div>
+        <div style="font-size:12px;color:var(--muted)">Email sign-in only — no Demat needed</div>
+      </div>
+    </header>
+
+    <section class="intro">
+      <strong>Problem</strong>
+      <div class="note">Many retail traders have repeatable, profitable manual rules but lack a safe, easy path to automate them. They need: simple parsing, transparent simulation, and a gradual automation path.</div>
+    </section>
+
+    <section class="features" aria-labelledby="features">
+      <div class="feature">
+        <h3>Plain-Language Parser</h3>
+        <div class="note">Enter your rule in natural language. The system highlights parsed components and confidence.</div>
+        <div style="margin-top:10px" class="example">Input: "Buy when 20MA crosses 50MA and RSI &gt; 60"</div>
+      </div>
+
+      <div class="feature">
+        <h3>Guided Parameter Tuning</h3>
+        <div class="note">Adjust timeframe, lookback windows, risk per trade, and sample symbol with helpful defaults.</div>
+        <div style="margin-top:10px" class="example">Defaults: timeframe=15m, risk=1.5% per trade</div>
+      </div>
+
+      <div class="feature">
+        <h3>In-browser Sandbox Backtest</h3>
+        <div class="note">Quick simulations run locally on sample CSV slices — includes win rate, average return, and drawdown.</div>
+        <div style="margin-top:10px" class="example">Result: win_rate=68% | avg_return=1.7% | max_dd=-6.2%</div>
+      </div>
+
+      <div class="feature">
+        <h3>Progressive Automation Modes</h3>
+        <div class="note">Manual → Assisted (signals for approval) → Auto — users choose confidence path.</div>
+      </div>
+    </section>
+
+    <div class="journey" aria-label="journey">
+      <div class="step">
+        <strong>1 • Observe</strong>
+        <div class="note">System watches your trades (optional) or accept simple rule text.</div>
+      </div>
+      <div class="step">
+        <strong>2 • Parse & Preview</strong>
+        <div class="note">See parsed blocks and edit before simulation.</div>
+      </div>
+      <div class="step">
+        <strong>3 • Simulate</strong>
+        <div class="note">Run a sandbox test and view plain-language metrics.</div>
+      </div>
+      <div class="step">
+        <strong>4 • Automate Gradually</strong>
+        <div class="note">Select Assisted mode to approve signals before full automation.</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h4>Simulation example (sample output)</h4>
+        <div class="metric"><div>Period</div><div>6 months</div></div>
+        <div class="metric"><div>Total Trades</div><div>21</div></div>
+        <div class="metric"><div>Win Rate</div><div>67%</div></div>
+        <div class="metric"><div>Avg Return / Trade</div><div>1.8%</div></div>
+        <div class="metric"><div>Max Drawdown</div><div>-7.4%</div></div>
+        <div class="metric"><div>Sharpe-like</div><div>1.5</div></div>
+        <div class="note">Interpretation: The sandbox shows relative performance vs your manual history. Provide clear statements: "This simulation is illustrative."</div>
+        <a class="cta" href="#" style="margin-top:12px;display:inline-block">Run this demo (sample)</a>
+      </div>
+
+      <aside class="panel">
+        <h4>Why this helps manual traders</h4>
+        <ul style="padding-left:18px;color:#0b2b2a">
+          <li>Removes coding barrier — natural language input</li>
+          <li>Builds trust via transparent, small-number metrics</li>
+          <li>Allows safe experiments with no real capital required</li>
+        </ul>
+
+        <div style="margin-top:12px">
+          <strong>Export</strong>
+          <div class="note" style="margin-top:6px">Downloadable skeletons for JS/Python with short inline comments to explain generated logic — great for reviewers.</div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>Design note: Keep microcopy conservative — always show disclaimers and a "why this matters" tooltip alongside each metric. • Nubra — placement deliverable</footer>
+  </div>
+</body>
+</html>
